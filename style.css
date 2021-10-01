@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Birthstone&display=swap');
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    background: url(https://i.pinimg.com/originals/a9/3c/b6/a93cb675268ed988b5fab27ecb649290.jpg);
+    background-size: cover;
+    position: relative;
+    margin: auto;
+    height: 100vh;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body::after {
+    content: "";
+    background-color: blue;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.1;
+}
+
+body * {
+    position: relative;
+    z-index: 1;
+}
+
+.piano {
+    display: flex;
+    opacity: .9;
+}
+
+.key {
+    height: calc(var(--width) * 4);
+    width: var(--width);
+}
+
+.white {
+    --width: 100px;
+    height: 400px;
+    background-color: #FFF;
+    border: 1px solid #333;
+    color: #000;
+    text-align: center;
+}
+
+.white.active {
+    background-color: #ccc;
+}
+
+.black {
+    --width: 60px;
+    height: 240px;
+    background-color: #000;
+    margin-left: calc(var(--width) / -2);
+    margin-right: calc(var(--width) / -2);
+    z-index: 2;
+    color: #FFF;
+    text-align: center;
+}
+
+.black.active {
+    background-color: #333;
+}
+
+header {
+    color: rgb(26, 172, 26);
+    position: absolute;
+    text-align: center;
+    margin-bottom: 30rem;
+    font-family: 'Birthstone', cursive;
+    font-size: 160%;
+}
+
+kbd {
+    position: relative;
+    color: #f00;
+}
+
+footer {
+    background-color: #000;
+    border-radius: 50%;
+    opacity: .7;
+    color: #FFF;
+    position: absolute;
+    margin-top: 499px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 30%;
+    padding-right: 30%;
+    text-align: center;
+}
